@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дякую!</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        img {
+            max-width: 100%;
+            max-height: 80vh;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div id="image-container">
+        <img id="random-image" src="" alt="Ти супер!">
+    </div>
+
+    <script>
+        // Array to store image paths
+        const images = [
+            'images/card1.png',
+            'images/card2.png',
+            'images/card3.png',
+            'images/card4.png',
+            'images/card5.png'
+            // Add more image paths as needed
+        ];
+
+        // Function to pick a random image
+        function getRandomImage() {
+            const randomIndex = Math.floor(Math.random() * images.length);
+            const randomImage = images[randomIndex];
+            document.getElementById('random-image').src = randomImage;
+        }
+
+        // Load a random image on page load
+        getRandomImage();
+    </script>
+</body>
+</html>
